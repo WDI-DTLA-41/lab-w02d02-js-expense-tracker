@@ -1,3 +1,47 @@
 body {
   background: pink;
 }
+
+input {
+margin:5px 0;
+display: block;
+border-radius: 5px;
+}
+
+tr {
+  width: 200px;
+  background: lightblue;
+}
+
+td {
+    width: 200px;
+  background: white;
+}
+
+.cost {
+  color: green;
+}
+
+.inputData {
+  color: red;
+}
+
+.expense-total {
+  margin: 0 5px;
+  color: red;
+  font-weight: bold;
+}
+
+p {
+  text-align: right;
+}
+
+#formName {
+  background:black;
+  color:white;
+}
+
+#formAmount {
+  background:gray;
+  color:gold;
+}
