@@ -25,7 +25,7 @@ var addExpense = function (){
   // Add Expense Name and cost to Expenses list
   var newExpense = document.createElement('li');
   newExpense.classList.add('expense');
-  newExpense.innerHTML = "Name: " + expenseNmInput.value + " Amount: " + expenseAmInput.value;
+  newExpense.innerHTML = "Name: " + expenseNmInput.value + " Amount: " + expenseAmInput.value + "  ";
   var remSpan = document.createElement('span');
   remSpan.innerHTML = "X";
   remSpan.classList.add('remove');
