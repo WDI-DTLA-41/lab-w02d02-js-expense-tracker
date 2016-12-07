@@ -14,6 +14,7 @@ var countExpenses = function() {
 };
 
 
+// function for adding an expense
 var addExpense = function (){
   console.log('clicked!')
   if (expenseAmInput.value == "" || expenseNmInput.value == "") {
@@ -26,20 +27,23 @@ var addExpense = function (){
 
 
 // Add Event Listener to Button
-var button = document.querySelector('button');
-button.addEventListener('click', addExpense);
+var addButton = document.querySelector('#addButton');
+addButton.addEventListener('click', addExpense);
 
 
 
 // function for adding expenses to a table
 var addExpensesToTable = function () {
-var row = table.insertRow(table.rows.length);
-var exp = row.insertCell(0);
-var amnt = row.insertCell(1);
-var delButton = row.insertCell(2);
-delButton.innerHTML = '<button class="remove">Delete</button>'
-exp.innerHTML = expenseNmInput.value;
-amnt.innerHTML = expenseAmInput.value;
+  var row = table.insertRow(table.rows.length);
+  var exp = row.insertCell(0);
+  var amnt = row.insertCell(1);
+  var deleteRow = row.insertCell(2);
+  delRowContent = document.createElement('button');
+  delRowContent.classList.add('remove');
+  delRowContent.innerHTML = "Delete it good";
+  deleteRow.appendChild(delRowContent);
+  exp.innerHTML = expenseNmInput.value;
+  amnt.innerHTML = expenseAmInput.value;
 };
 
 
