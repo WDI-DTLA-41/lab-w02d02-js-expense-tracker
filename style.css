@@ -1,8 +1,28 @@
 body {
   background-color: #e3fce4;
+  font-family: helvetica;
+}
+
+table, th, td {
+  border: 1px solid black;
 }
 
 button {
   margin-top: 20px;
 }
 
+.remove {
+/*  float:left;*/
+  margin-right: 10px;
+  padding: 0 2px;
+  border: 1px solid black;
+}
+
+.remove:hover {
+  color:red;
+  cursor: pointer;
+}
+
+.expenses {
+  list-style:none;
+}
