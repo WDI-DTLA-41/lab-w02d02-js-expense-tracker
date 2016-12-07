@@ -44,5 +44,5 @@ see what all their big expenses are.
 
 When a user has added expenses and clicks "Sort"
     they should see
-    - expesnes in descending order with the highest amount first
+    [] - expense in descending order with the highest amount first
     - and the lowest amount last
