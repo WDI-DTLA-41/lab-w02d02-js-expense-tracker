@@ -10,17 +10,17 @@ Their requirements are as follows:
 
 When a user visits the site...
     they should see... 
-    - an input field to enter an amount
-    - an input field to enter an expense name 
-    - a button that says "Add expense"
-    - the text "Expenses"
-    - the text "Current Expenses: 0"
+    [X] - an input field to enter an amount
+    [X] - an input field to enter an expense name 
+    [X] - a button that says "Add expense"
+    [X] - the text "Expenses"
+    [X] - the text "Current Expenses: 0"
 
 When a user enters an amount and a name for the expense...
     and clicks "Add expense"...
     they should see...
-    - the name and amount of the expense should be added under "Expenses"
-    - The text "Current Expenses: 0" should increase by the amount added
+    [X] - the name and amount of the expense should be added under "Expenses"
+    [X] - The text "Current Expenses: 0" should increase by the amount added
 
 ### Feature Request!
 
@@ -31,9 +31,9 @@ The client enjoys adding expenses, but they can't enter them perfectly every tim
 When a user enters an expense...
     and clicks "X"...
     they should see...
-    - the "Current Expenses" total decrease by that expense amount
+    [X] - the "Current Expenses" total decrease by that expense amount
     they shouldn't see
-    - the expense they removed
+    [X] - the expense they removed
 
 ### Feature Request!
 

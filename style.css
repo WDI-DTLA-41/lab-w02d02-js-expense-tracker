@@ -1,3 +1,9 @@
 body {
   background-color: grey;
 }
+
+
+.remove:hover {
+  color: red;
+  transition: all 1s ease;
+}
