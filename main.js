@@ -40,7 +40,7 @@ var addExpense = function (){
   newExpense.appendChild(remSpan);
   expenseList.appendChild(newExpense);
   countExpenses();
-
+  addExpensesToTable();
 };
 
 
@@ -86,12 +86,29 @@ var hope = function () {
 };
 
 
+var table = document.getElementById('expensesTable');
+// function for adding expenses to a table
+var addExpensesToTable = function () {
+var row = table.insertRow(table.rows.length);
+var exp = row.insertCell(0);
+var amnt = row.insertCell(1);
+var delButton = row.insertCell(2);
+delButton.innerHTML = '<button class="remove">Delete</button>'
+exp.innerHTML = expenseNmInput.value;
+amnt.innerHTML = expenseAmInput.value;
+};
 
 
+// add event listener to delete button to remove table row
+table.addEventListener('click', function (evt){
+  if (evt.target.classList.contains('remove')) {
+    console.log('Button was clicked');
+    console.log(evt);
+    console.log(evt.target.parentNode.parentNode);
+    evt.target.parentNode.parentNode.remove();
+  };
 
-
-
-
+});
 
 
 
