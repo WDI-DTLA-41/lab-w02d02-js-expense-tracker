@@ -1,0 +1,19 @@
+body {
+  background: aquamarine;
+}
+#form {
+  background: gold;
+}
+input {
+  display: block;
+}
+input, button {
+  margin: 10px;
+}
+table {
+  background: lavenderblush;
+  width: 900px;
+}
+.table-header {
+  background: plum;
+}
