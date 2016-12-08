@@ -14,23 +14,24 @@ var handleClick = function(event) {
   tr.classList.add('row');
   var newRow = tableBody.appendChild(tr);
   var obj = {name: expenseName.value, amount: parseFloat(amount.value)};
-
   expensesArr.push(obj);
-        var sum = 0;
-    for (var i = 0; i < expensesArr.length; i++) {
+  var sum = 0;
+  for (var i = 0; i < expensesArr.length; i++) {
     sum += expensesArr[i].amount;
-    console.log(sum);
   }
+
   total.innerHTML = sum;
   newRow.innerHTML = '<td class="expense-name">' + expenseName.value + '</td>' + '<td class="expense-amount">' + amount.value + '</td><td><button class="remove">remove</button></td>';
+  expenseName.value = "";
+  amount.value = "";
 }
 
 var remove = function(event) {
   var element = event.target;
+  var currentGrandpa = element.parentNode.parentNode;
   if (element.classList.contains('remove')) {
-    var grandpa = element.parentNode.parentNode;
-    grandpa.remove();
-    var removedName = grandpa.children[0];
+    currentGrandpa.remove();
+    var removedName = currentGrandpa.children[0];
     //loop through array and remove object with matching expense name in DOM
     //this way sort event does not add removed array items back to DOM when
     //it loops through array to change table to sorted table
@@ -39,7 +40,7 @@ var remove = function(event) {
       expensesArr.splice(i, 1);
       }
     }
-    var removedNumber = grandpa.children[1].textContent;
+    var removedNumber = currentGrandpa.children[1].textContent;
     total.innerHTML -= parseFloat(removedNumber);
   }
 }
@@ -59,7 +60,7 @@ var sortArray = function(event) {
   if (event.target.classList.contains('head')) {
     tableBody.innerHTML = "";
     for (var i = 0; i < expensesArr.length; i++) {
-      tableBody.innerHTML += '<tr><td>' + expensesArr[i].name + '</td><td>' + expensesArr[i].amount + '</td>' + '<td><button class="remove">remove</button></td></tr>';
+      tableBody.innerHTML += '<tr><td class="expense-name">' + expensesArr[i].name + '</td><td class="expense-amount">' + expensesArr[i].amount + '</td>' + '<td><button class="remove">remove</button></td></tr>';
     }
   }
 }
