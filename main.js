@@ -1,21 +1,47 @@
 var chkBook = document.querySelector('.expenses');
 
-var makeAgendaItems = function(event) {
+var addstuffList = function(event) {
+  var itemsBought = document.getElementById('expenses');
+  var costSpent = document.getElementById('amount');
 
-  var activities = document.querySelector('.stuff');
-  var bill = document.querySelector('.money');
+  var eachItem = document.createElement('li');
+  var eachBill = document.createElement('li');
 
-  var agendaStuff = document.createElement('li');
-  var spentMoney = document.createElement('li');
+  eachItem.setAttribute('class', 'itemsPer');
+  eachBill.setAttribute('class', 'costsPer');
 
-  agendaStuff.setAttribute('class', 'things');
-  spentMoney.setAttribute('class', 'costs');
+  eachItem.setAttribute('contenteditable', true);
+  eachBill.setAttribute('contenteditable', true);
 
-  activities.appendChild(agendaStuff);
-  bill.appendChild(spentMoney);
+  // agendaStuff.innerHTML=value;
+  // spentMoney.innerHTML=value;
+  document.getElementById('add-expense').onClick = function() {
+    var totalThings = document.getElementById('thingBought').value;
+    // var costsaddedIn = totalThings;
+    eachItem.appendChild(totalThings);
+}
+  document.getElementById('add-expense').onClick = function() {
+    var totalAmount = document.getElementById('spentAmount').value;
+    // var itemsaddedIn = totalAmount;
+    eachBill.appendChild(totalAmount);
+}
+
+
+  itemsBought.appendChild(eachItem);
+  costSpent.appendChild(eachBill);
 
 }
 
-var createItem = document.getElementById('add-expense');
+// var listStuff = function(event) {
+//   document.getElementById('expenseThing').value
+// }
 
-createItem.addEventListener('click', makeAgendaItems);
+// var listAmount = function(event) {
+//   document.getElementById('expenseAmount').value
+// }
+
+var createItem = document.getElementById('add-expense')
+
+createItem.addEventListener('click', addstuffList);
+
+
