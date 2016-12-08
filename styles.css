@@ -1,0 +1,47 @@
+
+
+body {
+  background: pink;
+
+}
+#container {
+
+}
+input {
+  width: 200px;
+  height: 25px;
+  padding: 5px;
+  margin: 5px auto;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    padding: 2px;
+    margin: 20 auto;
+
+}
+
+.removeExp {
+
+
+}
+table, th, tr{
+  border: 1px solid red;
+  width: 200px;
+  height: 25px;
+
+}
+.expAmt{
+
+}
+.expName {
+
+}
+#expTable {
+
+
+}
+
