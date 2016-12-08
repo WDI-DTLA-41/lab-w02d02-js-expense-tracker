@@ -6,16 +6,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Expenses!</h1>
-  <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
+  <h1>Expense Report</h1>
+  <div>
+    <input type="text" class="inputItem" placeholder="Expense Name">
+    <input type="text" class="inputCost" placeholder="Expense Amount">
     <button id="add-expense">Add expense</button>
-  </form>
-  <p>Total Expenses: $<span class="expense-total">0</p>
+  </div>
+  <p>Total Expenses: $<span id="expense-total">0</span></p>
   <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
+    <tr>
+      <td class="tbl-title">Expense</td>
+      <td class="tbl-title">Amount</td>
+    </tr>
+    <tr>
+      <!-- <td class="expItem">food</td>
+      <td class="expCost">4</td> -->
+    </tr>
   </table>
   <script src="main.js"></script>
 </body>

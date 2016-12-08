@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F5F1F1;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  width: 43%;
+  background: white;
+}
+
+.tbl-title {
+  background: lightgray;
+}
+.expItem {
+  background: lemonchiffon
+}
+
+.expCost {
+  background: #DAF7A6;
+}
