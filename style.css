@@ -1,0 +1,25 @@
+body {
+  background: #A8FFFF;
+}
+.expenses {
+  border: 2px solid grey;
+  width:30%;
+}
+
+thead {
+  background: green;
+}
+
+th {
+    border: 1px solid black;
+    height: 50px;
+
+}
+
+tbody tr {
+  background: red;
+}
+
+td {
+    border: 1px solid black;
+}
