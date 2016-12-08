@@ -23,15 +23,15 @@ button {
     margin: 20 auto;
 
 }
-
+table, th, tr, td {
+  border: 1px solid red;
+  width: 400px;
+  height: 25px;
+}
 .removeExp {
 
-
 }
-table, th, tr{
-  border: 1px solid red;
-  width: 200px;
-  height: 25px;
+.count {
 
 }
 .expAmt{

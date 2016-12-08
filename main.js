@@ -4,13 +4,14 @@ console.log("you are here");
 
 
 // create variables needed
-var counter = 0;
+var count;
+var row;
 var container;
 var expAmt;
 var expName;
 var addExpAmt;
-var addUpExpenses;
-var removeExp;
+var addUpExp;
+var removeExp = document.querySelector('span');
 var tableEntExp;
 var tableEntName;
 
@@ -24,37 +25,47 @@ addExpense = function(event){
   expName = document.querySelector('.expName').value;
   console.log('did I get exp amt and name?');
 
+      // counter
+     addUpExp = document.querySelectorAll('.row').length;
+     count = addUpExp + 1;
+     console.log(count);
+
+    // end counter
+
 // STEP 1 - this is how query the DOM for a table
-  // var expAmt = document.querySelector('input');
-  // var expName = document.querySelector('.expName');
   var table = document.querySelector('table');
 
-//table.insertRow(0);
+// create a table
+var row = table.insertRow();
 
-  // create a table
-  var row = table.insertRow();
 
-// Insert new cells (<td> elements) at the 1st and
-// 2nd position of the "new" <tr> element:
+// STEP 2 - makes new table element (row)
 var cell1 = row.insertCell(0);
-var cell2 = row.insertCell(1);
-var cell3 = row.insertCell(2);
+var cell2 = row.insertCell(1);  // this cell needs to increment
+var cell3 = row.insertCell(2);  // this row is the Delete button
+var cell4 = row.insertCell(3);  // this row is the 'X' to remove the
 
+// STEP 3 - grab what's in the cell user input on Amt and Name
 cell1.innerHTML = expAmt;
 cell2.innerHTML = expName;
 
-
+// this creates a button to delete the row
 cell3.innerHTML = '<button>Delete row</button>';
-  // create a new table row
-
-  // delete a row
-  // document.getElementById("myTable").deleteRow(0);
+cell4.innerHTML = '<span class="removeExp"> x </span>';
 
 
-  // add values to table row
-  // append table row to table
 
-}
+
+};
+// removeExp = this;
+//removeExp
+// var removeExp = function(){
+//   this.parentNode.remove();
+//     var clickToRemove = document.querySelectorAll('.removeExp');
+//     for (var i = 0; i < clickToRemove.length; i++){
+//       clickToRemove[i].addEventListener('click',removeExp);
+//     }
+// }
 
 // point at button to add expense
 var button = document.querySelector('button');
@@ -65,41 +76,8 @@ container = document.querySelector('#container');
 // container.appendChild(addExpName);
 //add expenseAmt to table
 
-// add expenseName to table
-
-// addExpenseAmt = function(event){
-
-
-//       //document.createElement('input');
-
-
-//       console.log('did I get to the add expense?');
-
-// }
-
-
-// point at input field expenseAmt and expenseName
-// expAmt = function(){
-//       expAmt.document.querySelector('input');
-
-// };
-
 // add eventListener on button when clicked
 button.addEventListener('click',addExpAmt);
-
-
-
-
-
-
-
-// enter expense amount
-
-
-
-// enter expense name
-
-
 
 
 // add event listener when user clicks button.
