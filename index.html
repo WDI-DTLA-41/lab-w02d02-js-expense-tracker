@@ -7,15 +7,26 @@
 </head>
 <body>
   <h1>Expenses!</h1>
-  <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
-    <button id="add-expense">Add expense</button>
-  </form>
+  <p class='input'>Input Expense Name <input type="text" class="expenseName">
+    Input Expense Amount <input type="text" class="expenseAmount">
+    <button id="addButton">Add expense</button>
+  </p>
   <p>Total Expenses: $<span class="expense-total">0</p>
   <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
+    <thead>
+      <tr>
+        <td class='expense-thead'>Expense</td>
+        <td class='amount-thead'>Amount</td>
+      </tr>
+    </thead>
+    <tbody class='tableBody'>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total Expenses : $</td>
+        <td class='total'>0</td>
+      </tr>
+    </tfoot>
   </table>
   <script src="main.js"></script>
 </body>
