@@ -26,11 +26,13 @@ var addstuffList = function(event) {
     eachBill.appendChild(totalAmount);
 }
 
-
   itemsBought.appendChild(eachItem);
   costSpent.appendChild(eachBill);
-
 }
+
+var createItem = document.getElementById('add-expense')
+
+createItem.addEventListener('click', addstuffList);
 
 // var listStuff = function(event) {
 //   document.getElementById('expenseThing').value
@@ -39,9 +41,3 @@ var addstuffList = function(event) {
 // var listAmount = function(event) {
 //   document.getElementById('expenseAmount').value
 // }
-
-var createItem = document.getElementById('add-expense')
-
-createItem.addEventListener('click', addstuffList);
-
-
