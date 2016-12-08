@@ -1,0 +1,36 @@
+input {
+  display: block;
+}
+
+body {
+  background-color: rgb(132, 135, 130);
+}
+input {
+  border: 2px solid black
+  border-radius: 10px;
+  margin: 10px;
+  float: center;
+}
+button {
+  margin: 8px;
+}
+td {
+  color: white;
+}
+table tr td{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 5px;
+
+}
+table {
+  width: 50%;
+  height: 40%;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
