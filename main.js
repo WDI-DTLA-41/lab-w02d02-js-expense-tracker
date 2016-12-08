@@ -65,21 +65,10 @@ var sortArray = function(event) {
   }
 }
 
-// var counter = function (event){
-//   if (event.target.classList.contains('counter')) {
-//     var sum = 0;
-//     for (var i = 0; i < expensesArr.length; i++) {
-//     sum += expensesArr[i].amount;
-//     console.log(sum);
-//   }
-//   total.innerHTML = sum;
-//   }
-// };
-
 table.addEventListener('click', remove);
 addButton.addEventListener('click', handleClick);
 table.addEventListener('click', sortArray);
-// document.body.addEventListener('click', counter);
+
 
 
 
