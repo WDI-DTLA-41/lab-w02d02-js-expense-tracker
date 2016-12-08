@@ -8,14 +8,18 @@
 <body>
   <h1>Expenses!</h1>
   <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
-    <button id="add-expense">Add expense</button>
+    <input type="text" name="expense-amount" placeholder="Expense Amount" class="amountInput">
+    <input type="text" name="expense-name" placeholder="Expense Name" class="nameInput">
+    <button id="add-expense">Add Expense</button>
   </form>
-  <p>Total Expenses: $<span class="expense-total">0</p>
+  <p>Total Expenses: $<span class="expense-total">0</span></p>
   <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
+    <thead>
+      <td class="thead">Expense</td><td class="thead">Amount</td>
+    </thead>
+    <tbody>
+      <tr><td>food</td><td>4</td></tr>
+    </tbody>
   </table>
   <script src="main.js"></script>
 </body>
