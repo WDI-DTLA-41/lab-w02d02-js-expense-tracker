@@ -18,7 +18,7 @@ When a user visits the site they should see...
 
 When a user enters an amount and a name for the expense and clicks "Add expense"...
 
-- they should see the name and amount of the expense should be added under "Expenses"
+- they should see the name and amount of the expense, under "Expenses".
 - the text "Current Expenses: 0" should increase by the amount added
 
 ![](assets/asset2.png?raw=true)
