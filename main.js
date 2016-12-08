@@ -47,27 +47,54 @@ document.body.appendChild(expenseTable);
 var tableRow = document.createElement('TR');
 expenseTable.appendChild(tableRow);
 
-// create two Table Headers -- ExpName and ExpAmount
+// create three Table Headers -- ExpName and ExpAmount and tableHeaderDelete
 var tableHeaderExpName = document.createElement('TH');
 var tableHeaderExpAmount = document.createElement('TH');
+var tableHeaderDelete = document.createElement('TH');
 tableHeaderExpName.textContent = "Name";
 tableHeaderExpAmount.textContent = "Amount";
+tableHeaderDelete.textContent = 'Delete';
 tableRow.appendChild(tableHeaderExpName);
 tableRow.appendChild(tableHeaderExpAmount);
+tableRow.appendChild(tableHeaderDelete);
+
 
 // create function handler to create Table Data
 var handleCreate = function(event) {
   console.log(inputExpenseAmount.value,inputExpenseName.value);
   var tableDataExpName = document.createElement('TD');
   var tableDataExpAmount = document.createElement('TD');
+  var tableDataDelete = document.createElement('TD');
+  var tableDataDeleteButton = document.createElement('button');
+  tableDataDeleteButton.className = 'Delete';
+  tableDataDeleteButton.textContent = 'Delete';
   tableDataExpName.textContent = inputExpenseName.value;
   tableDataExpAmount.textContent = inputExpenseAmount.value;
+  tableDataExpName.className = 'ExpenseName';
+  tableDataExpAmount.className = 'ExpenseAmount';
   tableHeaderExpName.appendChild(tableDataExpName);
   tableHeaderExpAmount.appendChild(tableDataExpAmount);
+  tableHeaderDelete.appendChild(tableDataDeleteButton);
+
 };
+
+var sumTotal = function() {
+
+  return input.value;
+}
+
+// create function handler to delete Data
+var handleDelete = function(event) {
+  var allName = document.querySelectorAll('.ExpanseName');
+  var allAmount = document.querySelectorAll('.ExpenseAmount');
+  var allDelete = document.querySelectorAll('.Delete');
+  console.log();
+}
+
 
 addExpenseButton.addEventListener('click', handleCreate);
 
+expenseTable.addEventListener('click', handleDelete);
 
 
 

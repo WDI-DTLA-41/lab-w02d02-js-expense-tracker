@@ -13,24 +13,38 @@ body {
 button {
   height: 25px;
   width: 100px;
+  font-size:10px;
   margin: 5px 15px;
+  display: block;
 }
 
 .totalCalcu {
   border: 3px solid black;
   float: right;
-  padding: 10px;
+  padding: 2px;
+  background-color:gray;
+  margin: 0 5px;
 }
 
 th {
   border: 2px solid black;
+  font-color:white;
 }
 
 table {
   border: 2px solid white;
+  background-color: gray;
+}
+
+.delete {
+  height: 20px;
+  display: block;
 }
 
 td {
+  border: 2px solid pink;
   display: block;
+  color: white;
 }
+
 
