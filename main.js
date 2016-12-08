@@ -55,3 +55,12 @@ var buttonDelete = function(evt) {
 expenseTableBody.addEventListener('click', buttonDelete);
 
 //SORT
+
+
+// http://jsfiddle.net/uNvmT/1/
+// http://stackoverflow.com/questions/8231310/convert-table-to-an-array
+// https://jsfiddle.net/m1rzupv0/
+// http://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript
+// http://jsbin.com/jugorov/1/edit?js,console
+// http://jsfiddle.net/zscQy/
+// http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects
