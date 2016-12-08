@@ -1,0 +1,36 @@
+body {
+  background-color:pink;
+}
+
+.container-expName {
+  margin: 15px;
+}
+
+.container-expAmount {
+  margin: 15px;
+}
+
+button {
+  height: 25px;
+  width: 100px;
+  margin: 5px 15px;
+}
+
+.totalCalcu {
+  border: 3px solid black;
+  float: right;
+  padding: 10px;
+}
+
+th {
+  border: 2px solid black;
+}
+
+table {
+  border: 2px solid white;
+}
+
+td {
+  display: block;
+}
+
