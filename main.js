@@ -17,8 +17,8 @@ function handleAddButton(){
   itemToAdd.appendChild(createExpenseAmount());
   itemToAdd.appendChild(createDeleteButton());
 
-  var table = document.querySelector('.expenses');
-  table.appendChild(itemToAdd);
+  var tbody = document.querySelector('.tableBody');
+  tbody.appendChild(itemToAdd);
   updateTotal();
 }
 // returns the expense name as TD
@@ -65,14 +65,29 @@ function handleDeleteButton(){
   button.parentNode.remove();
   updateTotal();
 }
+// function handles sorting expense names by alpha
 // function handleSortExpense(){
-
+// enter code
 // }
-function handleSortAmount(){
-  var numList = document.querySelector('.tBody').getRows();
-  console.log('list', numList);
-  numList.sort(function(expenseA, expenseB){
-    return expenseA[1].textContent - expenseB[1].textContent;
-  });
-  console.log(numList);
+//function handles Sorting Amount by largest/smallest
+// function handleSortAmount(){
+//   var numList = document.querySelectorAll('.tableBody');
+//   console.log('beforeSort', numList);
+//   console.log('afterSort', numList);
+//   console.log('after', document.querySelectorAll('.expense').item(1).textContent);
+//   numList.sort(function(expenseA, expenseB){
+//     return expenseA.children[1].textContent - expenseB.children[1].textContent;
+//   });
+//   console.log(numList);
+// }
+// function handleSortAmount(){
+//   var expenseRow = document.querySelectorAll('.expense');
+//   console.log(expenseRow[1].children[1].textContent);
+//   var holderRow = ;
+//   for(var i=0; i<expenseRow.length; i++){
+//     if(!holderRow){
+//       holderRow[i] = expenseRow[i];
+//     }
+
+//   }
 }
