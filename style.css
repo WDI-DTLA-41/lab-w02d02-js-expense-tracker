@@ -9,13 +9,15 @@ border-radius: 5px;
 }
 
 tr {
-  width: 200px;
-  background: lightblue;
+/*  width: 200px;
+*/  background: lightblue;
 }
 
 td {
-    width: 200px;
-  background: white;
+  border: goldenrod solid;
+
+/*    width: 200px;
+*/  background: white;
 }
 
 .cost {
@@ -44,4 +46,14 @@ p {
 #formAmount {
   background:gray;
   color:gold;
+}
+
+.error {
+  background: red;
+}
+
+.expenses {
+  width: 75%;
+  background: gray;
+
 }
