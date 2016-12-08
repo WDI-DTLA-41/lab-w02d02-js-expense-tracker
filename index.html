@@ -6,17 +6,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Expenses!</h1>
-  <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
-    <button id="add-expense">Add expense</button>
-  </form>
+  <div>
+    <h1>Expenses!</h1>
+  </div>
+
+  <div>
+    <button id="add-expense">Add expense</button><br>
+    <input id="total" type="text" name="expense-amount"><br>
+    <input id="employee" type="text" name="expense-name"><br>
+  </div>
+
   <p>Total Expenses: $<span class="expense-total">0</p>
+
+
+
+
+
   <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
+    <tr class="total">
+      <td id="head">Expense</td><td id="head">Amount</td>
+    </tr>
+    <tr id="list">
+      <td class="items"></td><td class="amount"></td>
+    </tr>
   </table>
   <script src="main.js"></script>
+  </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

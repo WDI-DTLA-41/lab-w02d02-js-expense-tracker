@@ -1,0 +1,24 @@
+body  {
+  background: #222;
+  color: white;
+}
+.expenses  {
+  border: 1px solid yellow;
+  height: 200px;
+  width: 200px;
+}
+
+#head {
+  background: white;
+  color:  green;
+}
+.items  {
+  border: 1px solid green;
+  height: 200px;
+  width: 200px;
+}
+#items  {
+  border: 1px solid orange;
+  height: 100px;
+  width: 100px;
+}
