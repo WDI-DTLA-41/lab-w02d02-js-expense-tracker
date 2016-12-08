@@ -37,6 +37,12 @@ var add = function(event){
   var table = document.querySelector('.expenses');
   table.appendChild(tr);
 
+  // function(counter){
+  //   var i = 0;
+  //   var row = document.querySelector('td');
+  //   row.innerHTML = "<p>Total Expenses: $<span class='expense-total'>" + i +"</p>"
+  // }
+
 };
 
 // add event listener for button click
