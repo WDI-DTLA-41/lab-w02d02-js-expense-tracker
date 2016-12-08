@@ -1,32 +1,39 @@
 body {
-  background: aquamarine;
-  color: white;
+  background: white;
   font-family: Arial, sans-serif;
-}
-#form {
-  background: gold;
+  margin: 30px;
 }
 input {
   display: block;
+  width: 200px;
+  padding: 5px;
 }
 input, button {
   margin: 10px;
 }
 p {
-  color: fuchsia;
+  color: lightseagreen;
   background: white;
 }
 table {
-  background: lavenderblush;
-  width: 900px;
+  width: 95%;
+  border-collapse: collapse;
 }
-td.expense {
-  background: gray;
+table tr td {
+  border: 1px solid lightseagreen;
+}
+td.column-head {
+  background: lightseagreen;
+}
+tr:hover {
+background-color: #f5f5f5
+}
+td {
+  text-transform: capitalize;
+  padding: 10px;
 }
 td.amount {
-  background: lightgray;
+  width: 40%;
 }
-.table-header {
-  background: plum;
-}
+
 

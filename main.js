@@ -1,4 +1,4 @@
-console.log("ello");
+// console.log("ello");
 
 // queries the expense input field
 var expenseInput = document.querySelector("#expense-name");
@@ -12,6 +12,7 @@ var table = document.querySelector("#expenses");
 // where event listener will be attached - "click"
 var addButton = document.querySelector("#add-expense");
 
+// queries the expense total in span
 var total = document.querySelector("#total");
 
 expenseInput.focus();
@@ -29,11 +30,11 @@ var handleAddExpense = function() {
 
     // convert amountInput text to number
     var amountNumber = parseInt(amountInput.value);
-    console.log(amountNumber);
+    // console.log(amountNumber);
 
     // convert span #total text to a number
     var totalNumber = parseInt(total.textContent);
-    console.log(totalNumber);
+    // console.log(totalNumber);
 
     // take the amount input value and add to the total
     total.textContent = totalNumber + amountNumber;
@@ -64,6 +65,12 @@ var handleAddExpense = function() {
 
     // append new tr to table
     table.appendChild(tr);
+
+    // clears input field
+    expenseInput.value = "";
+    amountInput.value = ""
+    expenseInput.focus();
+
   }
 };
 
