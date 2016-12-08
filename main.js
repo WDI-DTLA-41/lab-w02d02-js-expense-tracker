@@ -14,7 +14,14 @@ var handleClick = function(event) {
   tr.classList.add('row');
   var newRow = tableBody.appendChild(tr);
   var obj = {name: expenseName.value, amount: parseFloat(amount.value)};
+
   expensesArr.push(obj);
+        var sum = 0;
+    for (var i = 0; i < expensesArr.length; i++) {
+    sum += expensesArr[i].amount;
+    console.log(sum);
+  }
+  total.innerHTML = sum;
   newRow.innerHTML = '<td class="expense-name">' + expenseName.value + '</td>' + '<td class="expense-amount">' + amount.value + '</td><td><button class="remove">remove</button></td>';
 }
 
@@ -30,9 +37,10 @@ var remove = function(event) {
     for (var i=0; i<expensesArr.length; i++) {
       if (expensesArr[i].name == removedName.textContent) {
       expensesArr.splice(i, 1);
-      console.log(expensesArr);
       }
     }
+    var removedNumber = grandpa.children[1].textContent;
+    total.innerHTML -= parseFloat(removedNumber);
   }
 }
 
@@ -56,37 +64,22 @@ var sortArray = function(event) {
   }
 }
 
-var counter = function (event){
-  if (event.target.classList.contains('counter')) {
-    var sum = 0;
-    for (var i = 0; i < expensesArr.length; i++) {
-    sum += expensesArr[i].amount;
-    console.log(sum);
-  }
-  total.innerHTML = sum;
-  }
-};
+// var counter = function (event){
+//   if (event.target.classList.contains('counter')) {
+//     var sum = 0;
+//     for (var i = 0; i < expensesArr.length; i++) {
+//     sum += expensesArr[i].amount;
+//     console.log(sum);
+//   }
+//   total.innerHTML = sum;
+//   }
+// };
 
 table.addEventListener('click', remove);
 addButton.addEventListener('click', handleClick);
 table.addEventListener('click', sortArray);
-document.body.addEventListener('click', counter);
+// document.body.addEventListener('click', counter);
 
-
-function removeFromArray() {
-
-}
-
-// var rowLength = document.getElementsByClassName('row').length;
-// var row = document.getElementsByClassName('row')
-
-// row[0].children[0].textContent = first rows expense name
-// row[0].children[1].textContent = first rows expense amount
-
-
-// for (var i=0; i < rowLength; i++) {
-//   if (row.inner)
-// }
 
 
 
