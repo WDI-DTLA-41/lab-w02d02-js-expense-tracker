@@ -2,49 +2,18 @@ body {
   background-color:pink;
 }
 
-.container-expName {
-  margin: 15px;
+.expenses {
+  height: 50px;
+  width: 200px;
 }
 
-.container-expAmount {
-  margin: 15px;
-}
-
-button {
-  height: 25px;
-  width: 100px;
-  font-size:10px;
-  margin: 5px 15px;
-  display: block;
-}
-
-.totalCalcu {
-  border: 3px solid black;
-  float: right;
-  padding: 2px;
-  background-color:gray;
-  margin: 0 5px;
-}
-
-th {
+tr {
   border: 2px solid black;
-  font-color:white;
-}
-
-table {
-  border: 2px solid white;
-  background-color: gray;
-}
-
-.delete {
-  height: 20px;
-  display: block;
 }
 
 td {
-  border: 2px solid pink;
-  display: block;
-  color: white;
+  border: 5px solid white;
 }
+
 
 
