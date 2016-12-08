@@ -3,19 +3,46 @@ body {
   background: #F5F1F1;
 }
 
+input, button {
+  position: relative;
+  display: block;
+  margin: 5px;
+}
+
+.remove {
+  width: 5px;
+}
+
 table, tr, td {
   border: 1px solid black;
-  width: 43%;
   background: white;
 }
 
 .tbl-title {
   background: lightgray;
 }
+
+
+
 .expItem {
-  background: lemonchiffon
+  background: lemonchiffon;
+  border-radius: 2px;
+  margin: 20px;
+  width: 100px;
 }
 
 .expCost {
   background: #DAF7A6;
+  border-radius: 2px;
+  margin: 20px;
+  width: 100px;
+}
+
+.remove {
+  background: indianred;
+  border-radius: 2px;
+  margin: 20px;
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
 }
