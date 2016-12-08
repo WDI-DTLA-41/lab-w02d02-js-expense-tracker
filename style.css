@@ -1,0 +1,19 @@
+.expenses {
+  border: solid 1px black;
+}
+
+.costs {
+  text-align: left;
+}
+
+.things {
+  text-align: left;
+}
+
+#expenses {
+  border: solid 1px black;
+}
+
+#amount {
+  border: solid 1px black;
+}
