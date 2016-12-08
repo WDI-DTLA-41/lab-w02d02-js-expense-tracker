@@ -7,6 +7,7 @@ var amount = document.querySelector('#expense-amount');
 
 var table = document.querySelector('table');
 
+var tableBody = document.querySelector('#tableBody');
 
 
 var handleClick = function(event) {
@@ -15,7 +16,9 @@ var handleClick = function(event) {
   // numbers.push(amount.value);
   // console.log(numbers);
   var tr = document.createElement('tr');
-  var newRow = table.appendChild(tr);
+  tr.classList.add('row');
+  var newRow = tableBody.appendChild(tr);
+
   //create obj of new expense and amount and push into array
   var obj = {name: expenseName.value, amount: parseFloat(amount.value)};
   expensesArr.push(obj);
@@ -32,10 +35,15 @@ var remove = function(event) {
   expensesArr.splice(i, 1);
 }
 
-// var sort = function(event) {
-// var sortedArray = expensesArr.sort(function(a, b) {
-//     return b.amount - a.amount;
-//   });
+var sort = function(event) {
+    var sortedArray = expensesArr.sort(function(a, b) {
+    return b.amount - a.amount;
+  });
+    tableBody.innerHTML = "";
+    for (var i = 0; i < sortedArray.length; i++) {
+      tableBody.innerHTML += '<tr><td>' + sortedArray[i].name + '</td><td>' + sortedArray[i].amount + '</td></tr>';
+    }
+  }
 
 
 //   // store array length in variable
@@ -62,8 +70,7 @@ var counter = function (event){
 
 expenseList.addEventListener('click', remove);
 addButton.addEventListener('click', handleClick);
-// sortButton.addEventListener('click', sort);
-
+sortButton.addEventListener('click', sort);
 addButton.addEventListener('click', counter);
 
 
