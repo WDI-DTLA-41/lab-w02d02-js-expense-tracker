@@ -1,0 +1,43 @@
+body {
+  background: white;
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+#container {
+  width: 90%;
+}
+input {
+  display: block;
+  width: 200px;
+  padding: 5px;
+}
+input, button {
+  margin: 10px;
+}
+p {
+  color: lightseagreen;
+  background: white;
+  float: right;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table tr td {
+  border: 1px solid lightseagreen;
+}
+td.column-head {
+  background: lightseagreen;
+}
+tr:hover {
+background-color: #f5f5f5
+}
+td {
+  text-transform: capitalize;
+  padding: 10px;
+}
+td.amount {
+  width: 40%;
+}
+
+
