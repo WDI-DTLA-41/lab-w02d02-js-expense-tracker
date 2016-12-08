@@ -1,13 +1,14 @@
 console.log('Let it snow, let it snow, let it snow!');
 
+// create querySelectors
 var button = document.querySelector('#add-expense');
 var expenseTable = document.querySelector('tbody');
 var inputExpenseName = document.querySelector('#expense-name');
 var inputExpenseAmount = document.querySelector('#expense-amount');
-
-// create table headers
+var expenseTotal = document.querySelector('.expense-total');
 
 var handleInput = function(event) {
+  if (event.keyCode === 13);
 // things to do when clicked
 
   // create Table Row
@@ -31,11 +32,20 @@ var handleInput = function(event) {
   deleteButton.innerHTML = 'Delete';
   expenseDeleteData.appendChild(deleteButton);
   expenseRow.appendChild(expenseDeleteData);
+  deleteButton.addEventListener('click', handleDelete);
 };
 
+// create delete handler
 var handleDelete = function(event) {
   event.target.parentNode.parentNode.remove(event.target);
 }
 
+var sumTotal = function() {
+ var dataAmount = document.querySelectorAll('.amount');
+ for(var i = 0; i < dataAmount.length; i++) {
+  console.log(dataAmount);
+ }
+};
+
 button.addEventListener('click', handleInput);
-expenseTable.addEventListener('click', handleDelete);
+button.addEventListener('keypress', handleInput);

@@ -1,5 +1,6 @@
 body {
-  background-color:pink;
+  background-color:rgba(20,150,100,.5);
+  margin: 15px;
 }
 
 .expenses {
@@ -12,7 +13,7 @@ tr {
 }
 
 td {
-  border: 5px solid white;
+  border: 2px solid white;
 }
 
 
