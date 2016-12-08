@@ -66,7 +66,7 @@ table.addEventListener('click', function (evt){
 
 
 // Table Sorting
-var sortButton = document.querySelector('#sort-button');
+var sortButton = document.getElementById('sort-button');
 // Add Event Listener to sort button
 sortButton.addEventListener('click', sortTable);
 
