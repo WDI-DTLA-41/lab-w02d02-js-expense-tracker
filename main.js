@@ -1,5 +1,6 @@
 console.log('linked!')
 
+// get the table
 var table = document.getElementById('expensesTable');
 
 // Expense Name and amount
@@ -44,6 +45,9 @@ var addExpensesToTable = function () {
   deleteRow.appendChild(delRowContent);
   exp.innerHTML = expenseNmInput.value;
   amnt.innerHTML = expenseAmInput.value;
+
+  expenseNmInput.value = "";
+  expenseAmInput.value = "";
 };
 
 
@@ -59,10 +63,16 @@ table.addEventListener('click', function (evt){
   };
 });
 
-// Table Sorting
 
-// get the table
-var table = document.getElementById('expensesTable');
+
+// Table Sorting
+var sortButton = document.querySelector('#sort-button');
+// Add Event Listener to sort button
+sortButton.addEventListener('click', sortTable);
+
+
+var sortTable = function () {
+  console.log('clicked sort!');
 // get the Table rows
 tableRows = table.querySelectorAll('tr');
 // get the Amount Value
@@ -81,10 +91,14 @@ tableRows = convertToArray(tableRows);
 // Remove the table header row
 tableRows.shift();
 
+// Sorts in Descending Order
 tableRows.sort(function (a, b){
-  if (a.childNodes[1].innerHTML > b.childNodes[1].innerHTML) {
-    return a;
-  }
+  return a.childNodes[1].innerHTML + b.childNodes[1].innerHTML;
 });
 
+// add the ordered items back to the table
+for (var i = 0; i < tableRows.length; i++) {
+  table.appendChild(tableRows[i]);
+};
 
+};
