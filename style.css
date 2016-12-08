@@ -1,0 +1,11 @@
+tr {
+  border: 2px solid black;
+}
+
+td {
+  border: 5px solid teal;
+}
+
+body {
+  background-color: #c7e8d4;
+}
