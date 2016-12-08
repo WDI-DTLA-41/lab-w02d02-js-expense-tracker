@@ -1,5 +1,4 @@
 var addButton = document.querySelector('#add');
-var sortButton = document.querySelector('#sort');
 var total = document.querySelector('#total-expenses');
 var expenseList = document.querySelector('.expenses');
 var expensesArr = [];
@@ -39,9 +38,11 @@ var sort = function(event) {
     var sortedArray = expensesArr.sort(function(a, b) {
     return b.amount - a.amount;
   });
-    tableBody.innerHTML = "";
-    for (var i = 0; i < sortedArray.length; i++) {
-      tableBody.innerHTML += '<tr><td>' + sortedArray[i].name + '</td><td>' + sortedArray[i].amount + '</td></tr>';
+    if (event.target.classList.contains('head')) {
+      tableBody.innerHTML = "";
+      for (var i = 0; i < sortedArray.length; i++) {
+        tableBody.innerHTML += '<tr><td>' + sortedArray[i].name + '</td><td>' + sortedArray[i].amount + '</td></tr>';
+      }
     }
   }
 
@@ -70,7 +71,7 @@ var counter = function (event){
 
 expenseList.addEventListener('click', remove);
 addButton.addEventListener('click', handleClick);
-sortButton.addEventListener('click', sort);
+table.addEventListener('click', sort);
 addButton.addEventListener('click', counter);
 
 
