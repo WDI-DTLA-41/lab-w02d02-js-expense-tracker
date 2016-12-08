@@ -10,6 +10,14 @@ var clicked = false;
 var handleClick = function(event) {
   var expenseName = document.querySelector('#expense-name');
   var amount = document.querySelector('#expense-amount');
+  if (amount.value == "") {
+    console.log("must have amount");
+    return false;
+  }
+  if (expenseName.value == "") {
+    console.log("must have name");
+    return false;
+  }
   var tr = document.createElement('tr');
   tr.classList.add('row');
   var newRow = tableBody.appendChild(tr);
@@ -34,7 +42,7 @@ var remove = function(event) {
     var removedName = currentGrandpa.children[0];
     //loop through array and remove object with matching expense name in DOM
     //this way sort event does not add removed array items back to DOM when
-    //it loops through array to change table to sorted table
+    //it appends table with sorted array
     for (var i=0; i<expensesArr.length; i++) {
       if (expensesArr[i].name == removedName.textContent) {
       expensesArr.splice(i, 1);
