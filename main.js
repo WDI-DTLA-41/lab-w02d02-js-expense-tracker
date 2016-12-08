@@ -4,7 +4,8 @@ var expensesArr = [];
 var amount = document.querySelector('#expense-amount');
 var table = document.querySelector('table');
 var tableBody = document.querySelector('#tableBody');
-var clicked = false;
+var amountClicked = false;
+var expenseClicked = false;
 
 
 var handleClick = function(event) {
@@ -54,18 +55,29 @@ var remove = function(event) {
 }
 
 var sortArray = function(event) {
-  if (!clicked) {
+  if (!amountClicked) {
     expensesArr = expensesArr.sort(function(a, b) {
     return b.amount - a.amount;
     });
-    clicked = true;
-  } else if (clicked) {
+    amountClicked = true;
+  } else if (amountClicked) {
     expensesArr = expensesArr.sort(function(a, b) {
     return a.amount - b.amount;
     });
-    clicked = false;
+    amountClicked = false;
   }
-  if (event.target.classList.contains('head')) {
+  if (!expenseClicked) {
+    expensesArr = expensesArr.sort(function(a, b) {
+    return b.name - a.name;
+    });
+    expenseClicked = true;
+  } else if (expenseClicked) {
+    expensesArr = expensesArr.sort(function(a, b) {
+    return a.name - b.name;
+    });
+    expenseClicked = false;
+  }
+  if (event.target.classList.contains('amount-head') || event.target.classList.contains('expense-head')) {
     tableBody.innerHTML = "";
     for (var i = 0; i < expensesArr.length; i++) {
       tableBody.innerHTML += '<tr><td class="expense-name">' + expensesArr[i].name + '</td><td class="expense-amount">' + expensesArr[i].amount + '</td>' + '<td><button class="remove">remove</button></td></tr>';
