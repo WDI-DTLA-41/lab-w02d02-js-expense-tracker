@@ -59,6 +59,32 @@ table.addEventListener('click', function (evt){
   };
 });
 
+// Table Sorting
 
+// get the table
+var table = document.getElementById('expensesTable');
+// get the Table rows
+tableRows = table.querySelectorAll('tr');
+// get the Amount Value
+tableRows[1].childNodes[1].innerHTML;
+
+// create array of table rows
+// sort that way
+// tableRows is a nodeList not an array get it in an array with array.from
+// function to convert nodeList to Array
+var convertToArray = function (arr){
+  return Array.from(arr);
+};
+
+// This is the array
+tableRows = convertToArray(tableRows);
+// Remove the table header row
+tableRows.shift();
+
+tableRows.sort(function (a, b){
+  if (a.childNodes[1].innerHTML > b.childNodes[1].innerHTML) {
+    return a;
+  }
+});
 
 
