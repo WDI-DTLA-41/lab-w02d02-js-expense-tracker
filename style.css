@@ -1,0 +1,10 @@
+.expenses, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+button {
+  display: inline-block;
+  margin: 0 auto;
+}
