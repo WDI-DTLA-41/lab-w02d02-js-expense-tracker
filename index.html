@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <meta charset="utf-8">
   <title>Expense Report</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <div class="container">
+    <h1>Expenses!</h1>
+    <form>
+      <input type="text" placeholder="Name" name="expense-name">
+      <input type="text" placeholder="Amount" name="expense-amount">
+      <button id="add-expense">Add expense</button>
+    </form>
+    <p>Total Expenses: $<span class="expense-total">0</span></p>
+    <table class="expenses">
+      <thead>
+        <tr>
+          <td class="heading-name">Name</td>
+          <td class="heading-amount" colspan="2">Amount</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
