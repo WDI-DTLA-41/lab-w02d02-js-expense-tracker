@@ -10,22 +10,23 @@ Their requirements are as follows:
 
 When a user visits the site they should see... 
 
-- the text "Expense Report"
-- an input field to enter an amount
-- an input field to enter an expense name 
-- a button that says "Add expense"
-- the text "Total Expenses: 0"
+[x] the text "Expense Report"
+[x] an input field to enter an amount
+[x] an input field to enter an expense name 
+[x] a button that says "Add expense"
+[x] the text "Total Expenses: 0"
 
 When a user enters an amount and a name for the expense and clicks "Add expense"...
 
-- they should see the name and amount of the expense should be added under "Expenses"
+[x] they should see the name and amount of the expense should be added under "Expenses"
+
 - the text "Current Expenses: 0" should increase by the amount added
 
 ![](assets/asset2.png?raw=true)
 
 ### Feature Request!
 
-- [ ] The client would prefer the data be displayed as a [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
+[x] The client would prefer the data be displayed as a [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
 
 "Can we have a table with 'Expense' and 'Amount' as headers?"
 

@@ -1,5 +1,7 @@
 body {
   background: aquamarine;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 #form {
   background: gold;
@@ -10,10 +12,21 @@ input {
 input, button {
   margin: 10px;
 }
+p {
+  color: fuchsia;
+  background: white;
+}
 table {
   background: lavenderblush;
   width: 900px;
 }
+td.expense {
+  background: gray;
+}
+td.amount {
+  background: lightgray;
+}
 .table-header {
   background: plum;
 }
+
