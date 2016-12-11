@@ -6,14 +6,14 @@ var expTotal = document.querySelector(".exp-total");
 var total = 0;
 var removeButtons = [];
 var expense;
-var button = document.querySelector('.remove');
 
 
 var renderRow = function(name, amount) {
   var tr = document.createElement('tr');
   var td = document.createElement('td');
   var tbody = document.querySelector('tbody')
-  rmv = document.createElement('button');
+  var tdRemove = document.createElement('td');
+  var rmv = document.createElement('button');
   rmv.textContent = 'Remove';
   rmv.classList = 'remove';
   td.innerHTML = name;
@@ -21,7 +21,8 @@ var renderRow = function(name, amount) {
   td = document.createElement('td');
   td.textContent = amount;
   tr.appendChild(td);
-  td.appendChild(rmv);
+  tr.appendChild(tdRemove);
+  tdRemove.appendChild(rmv);
   removeButtons.push(rmv);
   for (var i = 0; i < removeButtons.length; i++) {
       removeButtons[i].addEventListener('click', handleRemove);
@@ -57,10 +58,9 @@ var handleRemove = function() {
   console.log('clicked');
   var buttonParent = this.parentNode;
   var expRow = buttonParent.parentNode;
-  expRow.remove();
-  var subtract = button.parentNode.textContent;
-
+  var subtract = buttonParent.previousSibling.textContent;
   subtractTotal(subtract);
+  expRow.remove();
 }
 
 var getValues = function() {
