@@ -1,0 +1,61 @@
+h1 {
+  text-decoration: underline;
+  font-size:65px;
+  text-align:center;
+  margin-bottom:135px;
+}
+
+table, tr, td {
+  border:1px black solid;
+  border-collapse:collapse;
+}
+
+table {
+  width:100%;
+  font-size:20px;
+}
+
+tr {
+
+}
+
+td {
+  width:10%;
+  min-height:10%;
+  padding:10px;
+}
+button:hover {
+  background: grey;
+  color:blue;
+  border-radius: 7px;
+}
+
+#wholePage {
+  border: 10px lightblue solid;
+  margin: 25px 145px 0 145px;
+  min-height:715px;
+  padding:5px 25px 25px 25px;
+  position:absolute;
+  min-width:1080px;
+}
+
+#totalExpenses {
+  text-align: right;
+  font-weight: bold;
+  font-size:20px;
+}
+
+.delete {
+  border: 1px black solid;
+  width:75px;
+  height:22px;
+  background: red;
+  color:black;
+  border-radius: 5px;
+  text-align:center;
+  float:right;
+}
+
+.delete:hover {
+  cursor:pointer;
+}

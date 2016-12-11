@@ -6,17 +6,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Expenses!</h1>
-  <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
-    <button id="add-expense">Add expense</button>
-  </form>
-  <p>Total Expenses: $<span class="expense-total">0</p>
-  <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
-  </table>
+  <div id="wholePage">
+    <h1>Expense Report (Tracker)</h1>
+
+    <div id="form">
+      <input type="text" name="expense-name" placeholder="Expense Name"><p></p>
+      <input type="text" name="expense-amount" placeholder="Expense Amount"><p></p>
+      <button id="add-expense">Add expense</button>
+    </div>
+
+    <div id="totalExpenses">
+      <p>Total Expenses: $<span class="expense-total">0</span></p>
+    </div>
+    <table class="expenses">
+        <tr style="background: skyblue; font-weight: bold; text-decoration: underline; text-align: center;"><td>Expense</td><td>Amount</td><td></td></tr>
+
+    </table>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
