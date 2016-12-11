@@ -6,48 +6,72 @@ var expName = document.querySelector('input[name="exp-name"]');
 var expAmount = document.querySelector('input[name="exp-amount"]');
 var expTotal = document.querySelector(".exp-total");
 var total = 0;
+var removeButtons = [];
+var expense;
+var button = document.querySelector('.remove');
+
+
+var renderRow = function(name, amount) {
+  var tr = document.createElement('tr');
+  var td = document.createElement('td');
+  var tbody = document.querySelector('tbody')
+  rmv = document.createElement('button');
+  rmv.textContent = 'Remove';
+  rmv.classList = 'remove';
+  td.innerHTML = name;
+  tr.appendChild(td);
+  td = document.createElement('td');
+  td.textContent = amount;
+  tr.appendChild(td);
+  td.appendChild(rmv);
+  removeButtons.push(rmv);
+  for (var i = 0; i < removeButtons.length; i++) {
+      removeButtons[i].addEventListener('click', handleRemove);
+    }
+    return tr;
+}
 
 var handleClick = function(evt) {
   evt.preventDefault();
-  var expense = getValues();
+  expense = getValues();
   if (expense.name === '' || expense.amount === NaN) {
     return false;
   }
-  updateTotal(expense.amount);
+  addTotal(expense.amount);
   var row = renderRow(expense.name, expense.amount);
   tbody.appendChild(row);
   clearInputs();
 }
 
-var handleRemove = function() {
-
-}
-
-
-var updateTotal = function(amount) {
+var addTotal = function(amount) {
   total += amount;
   expTotal.textContent = total;
 }
 
-btn.addEventListener('click', handleClick);
-// <tr>
-//    <td>Coffee</td>
-//    <td>2.00</td>
-// </tr>
 
-var renderRow = function(name, amount) {
-  var tr = document.createElement('tr');
-  var td = document.createElement('td');
-  var rmv = document.createElement('button');
-  rmv.textContent = "Remove";
-  td.textContent = name;
-  tr.appendChild(td);
-  td = document.createElement('td');
-  td.textContent = amount;
-  tr.appendChild(td);
-  td.appendChild(rmv)
-  return tr;
+var subtractTotal = function(amount) {
+  total = expTotal.textContent - amount;
+  expTotal.textContent = total;
+
 }
+
+var handleRemove = function() {
+  console.log('clicked');
+  var buttonParent = this.parentNode;
+  var expRow = buttonParent.parentNode;
+  expRow.remove();
+  var subtract = button.parentNode.textContent;
+
+  subtractTotal(subtract);
+}
+
+
+
+
+btn.addEventListener('click', handleClick);
+
+
+
 
 var getValues = function() {
   var val = parseFloat(expAmount.value) || 0
@@ -63,7 +87,3 @@ var clearInputs = function() {
 }
 
 
-// var row = renderRow('coffee', '2.00');
-// tbody.appendChild(row);
-// row = renderRow('muffin', '2.00');
-// tbody.appendChild(row);
