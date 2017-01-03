@@ -11,7 +11,7 @@ var expense;
 var renderRow = function(name, amount) {
   var tr = document.createElement('tr');
   var td = document.createElement('td');
-  var tbody = document.querySelector('tbody')
+  var tbody = document.querySelector('tbody');
   var tdRemove = document.createElement('td');
   var rmv = document.createElement('button');
   rmv.textContent = 'Remove';
@@ -28,7 +28,7 @@ var renderRow = function(name, amount) {
       removeButtons[i].addEventListener('click', handleRemove);
     }
     return tr;
-}
+};
 
 var handleClick = function(evt) {
   evt.preventDefault();
@@ -40,19 +40,19 @@ var handleClick = function(evt) {
   var row = renderRow(expense.name, expense.amount);
   tbody.appendChild(row);
   clearInputs();
-}
+};
 
 var addTotal = function(amount) {
   total += amount;
   expTotal.textContent = total;
-}
+};
 
 
 var subtractTotal = function(amount) {
   total = expTotal.textContent - amount;
   expTotal.textContent = total;
 
-}
+};
 
 var handleRemove = function() {
   console.log('clicked');
@@ -61,20 +61,20 @@ var handleRemove = function() {
   var subtract = buttonParent.previousSibling.textContent;
   subtractTotal(subtract);
   expRow.remove();
-}
+};
 
 var getValues = function() {
-  var val = parseFloat(expAmount.value) || 0
+  var val = parseFloat(expAmount.value) || 0;
   return {
     name: expName.value,
     amount: val
-  }
-}
+  };
+};
 
 var clearInputs = function() {
   expAmount.value = '';
   expName.value = '';
-}
+};
 
 
 btn.addEventListener('click', handleClick);
