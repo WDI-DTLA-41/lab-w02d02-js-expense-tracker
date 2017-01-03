@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Expense Report</title>
   <meta charset="utf-8">
   <title>Expense Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Expenses!</h1>
-  <form>
-    <input type="text" name="expense-amount">
-    <input type="text" name="expense-name">
-    <button id="add-expense">Add expense</button>
-  </form>
-  <p>Total Expenses: $<span class="expense-total">0</p>
-  <table class="expenses">
-    <tr><td>Expense</td><td>Amount</td></tr>
-    <tr><td>food</td><td>4</td></tr>
-  </table>
-  <script src="main.js"></script>
+<h1>Expense Tracker</h1>
+<form>
+  <input type="text" name="exp-name">
+  <input type="text" name="exp-amount">
+  <button>Add Expense</button>
+</form>
+<p>Total expenses : <span class="exp-total"></span></p>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Amount</td>
+    </tr>
+    </thead>
+      <tbody>
+      </tbody>
+</table>
+
+<script src="main.js"></script>
+
 </body>
 </html>
